@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Enter ID of Plot to be Deleted</h2></br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p><input type="submit" value="Submit" onclick="deletionSuccess()"></p>
+</form>
+
+<script>
+    function deletionSuccess() {
+        alert('Deletion Successful')
+    }
+</script>
+{% endblock %}

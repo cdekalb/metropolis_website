@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Metropolis Home</h1>
+  <p>Welcome to the Metropolis Website!</p>
+  <h2>Dynamic content</h2>
+  <p>The website has the following record counts:</p>
+  <ul>
+    <li><strong>Plots:</strong> {{ num_plots }}</li>
+  </ul>
+{% endblock %}

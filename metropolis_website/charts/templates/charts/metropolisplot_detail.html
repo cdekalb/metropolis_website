@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>ID: {{ metropolisplot.id }}</h1>
+
+  <p><strong>Distribution: </strong>{{ metropolisplot.dist }}</p>
+  <p><strong>Number of Distribution Points: </strong>{{ metropolisplot.bins }}</p>
+  <p><strong>Number of Samples: </strong>{{ metropolisplot.totSamples }}</p>
+  <p><strong>Mean: </strong>{{ metropolisplot.mean }}</p>
+  <p><strong>Standard Deviation: </strong>{{ metropolisplot.std }}</p>
+  <p><strong>Lower Bound: </strong>{{ metropolisplot.lowerBound }}</p>
+  <p><strong>Upper Bound: </strong>{{ metropolisplot.upperBound }}</p>
+  <a href="{% url 'charts:plot-view' metropolisplot.id %}">View plot</a>
+
+{% endblock %}

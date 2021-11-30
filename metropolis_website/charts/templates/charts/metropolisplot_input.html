@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Enter Parameters</h2></br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p><input type="submit" value="Submit" onclick="submissionSuccess()"></p>
+</form>
+
+<script>
+    function submissionSuccess() {
+        alert('Input Successful')
+    }
+</script>
+{% endblock %}

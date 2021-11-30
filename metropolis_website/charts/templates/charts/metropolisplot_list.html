@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Plot List</h1>
+  {% if metropolisplot_list %}
+  <ul>
+    {% for metropolisplot in metropolisplot_list %}
+      <li>
+        <a href="{{ metropolisplot.get_absolute_url }}">{{ metropolisplot.id }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no plots available.</p>
+  {% endif %}
+{% endblock %}
